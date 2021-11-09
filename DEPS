@@ -224,6 +224,15 @@ hooks = [
     ],
   },
   {
+    "name": "AARCH64 bypass",
+    "pattern": ".",
+    "action" [ "sed",
+              "-i",
+              "\"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\"",
+              "build/linux/sysroot_scripts/install-sysroot.py",
+    ],
+  },
+  {
     # Downloads the current stable linux sysroot to build/linux/ if needed.
     # This sysroot updates at about the same rate that the chrome build deps
     # change.
