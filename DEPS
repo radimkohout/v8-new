@@ -229,7 +229,7 @@ hooks = [
     "action" [ "sed",
               "-i",
               "\"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\"",
-              "build/linux/sysroot_scripts/install-sysroot.py",
+              "v8/build/linux/sysroot_scripts/install-sysroot.py",
     ],
   },
   {
