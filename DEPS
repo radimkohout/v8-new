@@ -226,7 +226,8 @@ hooks = [
   {
     "name": "List",
     "pattern": ".",
-    "action": ["ls v8/"]
+    "action": ["ls v8/"],
+  },
   {
     "name": "AARCH64 bypass",
     "pattern": ".",
