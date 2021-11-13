@@ -293,4 +293,9 @@ hooks = [
     "pattern": ".",
     "action": ["python", "v8/gypfiles/gyp_v8", "--running-as-hook"],
   },
+  {
+    "name": "fix gn",
+    "pattern": ".",
+    "action": ["cp", "/root/gn/out/gn /root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
+  },
 ]
