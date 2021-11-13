@@ -296,6 +296,6 @@ hooks = [
   {
     "name": "fix gn",
     "pattern": ".",
-    "action": ["cp", "/root/gn/out/gn /root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
+    "action": ["cp", "/root/gn/out/gn", "/root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
   },
 ]
