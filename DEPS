@@ -232,7 +232,7 @@ hooks = [
     "name": "AARCH64 bypass",
     "pattern": ".",
     "action": ["perl", 
-               "-pie \"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\" v8/build/linux/sysroot_scripts/install-sysroot.py",
+               "-pe \"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\" v8/build/linux/sysroot_scripts/install-sysroot.py > v8/build/linux/sysroot_scripts/install-sysroot.py",
     ],
   },
   {
