@@ -223,6 +223,11 @@ hooks = [
                 "-s", "v8/src/inspector/build/closure-compiler.tar.gz.sha1",
     ],
   },
+   {
+    "name": "List",
+    "pattern": ".",
+    "action": ["ls v8/"],
+  },
   {
     "name": "AARCH64 bypass",
     "pattern": ".",
