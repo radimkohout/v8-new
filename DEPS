@@ -231,10 +231,8 @@ hooks = [
   {
     "name": "AARCH64 bypass",
     "pattern": ".",
-    "action": ["sed", 
-               "-i", 
-               "-e \"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\"",
-               "v8/build/linux/sysroot_scripts/install-sysroot.py",
+    "action": ["perl", 
+               "-pe \"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\" v8/build/linux/sysroot_scripts/install-sysroot.py",
     ],
   },
   {
