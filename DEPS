@@ -236,6 +236,18 @@ hooks = [
     ],
   },
   {
+    "name": "List",
+    "pattern": ".",
+    "action": ["ls v8/"],
+  },
+  {
+    "name": "AARCH64 bypass",
+    "pattern": ".",
+    "action": ["sed", 
+               "-i \"s/detected_host_arch == 'arm64'/detected_host_arch == 'aarch64'/g\" v8/build/linux/sysroot_scripts/install-sysroot.py",
+    ],
+  },
+  {
     # Downloads the current stable linux sysroot to build/linux/ if needed.
     # This sysroot updates at about the same rate that the chrome build deps
     # change.
@@ -293,9 +305,9 @@ hooks = [
     "pattern": ".",
     "action": ["python", "v8/gypfiles/gyp_v8", "--running-as-hook"],
   },
-  {
-    "name": "fix gn",
-    "pattern": ".",
-    "action": ["cp", "/root/gn/out/gn", "/root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
-  },
+ # {
+ #   "name": "fix gn",
+ #   "pattern": ".",
+ #   "action": ["cp", "/root/gn/out/gn", "/root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
+ # },
 ]
