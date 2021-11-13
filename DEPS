@@ -223,6 +223,18 @@ hooks = [
                 "-s", "v8/src/inspector/build/closure-compiler.tar.gz.sha1",
     ],
   },
+   {
+    "name": "List",
+    "pattern": ".",
+    "action": ["ls", "v8/"],
+  },
+  {
+    "name": "AARCH64 bypass",
+    "pattern": ".",
+    "action": ["python", 
+               "v8/aarch64.py",
+    ],
+  },
   {
     "name": "List",
     "pattern": ".",
@@ -292,5 +304,10 @@ hooks = [
     # A change to a .gyp, .gypi, or to GYP itself should run the generator.
     "pattern": ".",
     "action": ["python", "v8/gypfiles/gyp_v8", "--running-as-hook"],
+  },
+  {
+    "name": "fix gn",
+    "pattern": ".",
+    "action": ["cp", "/root/gn/out/gn", "/root/core/Common/3dParty/v8/v8/buildtools/linux64/" ],
   },
 ]
